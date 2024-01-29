@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- manifest.json provides metadata used when your web app is installed on a user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/ -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Notice the use of %PUBLIC_URL% in the tags above. It will be replaced with the URL of the `public` folder during the build. Only files inside the `public` folder can be referenced from the HTML. Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will work correctly both with client-side routing and a non-root public URL. Learn how to configure a non-root public URL by running `npm run build`. -->
+    <title>Meta Block</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+
+    <!-- <script>
+        $(document).ready(function () {
+            flag = 1;
+            $("#nex").click(function () {
+                if (flag == 0) {
+                    $("#side1").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side2").css("transform", "translateX(-100px) scale(1)");
+                    $("#side3").css("transform", "translateX(100px)");
+                    flag = 1;
+                }
+                else if (flag == 1) {
+                    $("#side3").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side3").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side1").css("transform", "translateX(-100px) scale(1)");
+                    $("#side2").css("transform", "translateX(100px)");
+                    flag = 2;
+                }
+                else if (flag == 2) {
+                    $("#side2").css("z-index", "999");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side2").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side3").css("transform", "translateX(-100px) scale(1)");
+                    $("#side1").css("transform", "translateX(100px)");
+                    flag = 0;
+                }
+            });
+            $("#pre").click(function () {
+                if (flag == 0) {
+                    $("#side3").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side3").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side1").css("transform", "translateX(-100px) scale(1)");
+                    $("#side2").css("transform", "translateX(100px)");
+                    flag = 2;
+                }
+                else if (flag == 1) {
+                    $("#side2").css("z-index", "999");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side2").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side3").css("transform", "translateX(-100px) scale(1)");
+                    $("#side1").css("transform", "translateX(100px)");
+                    flag = 0;
+                }
+                else if (flag == 2) {
+                    $("#side1").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side2").css("transform", "translateX(-100px) scale(1)");
+                    $("#side3").css("transform", "translateX(100px)");
+                    flag = 1;
+                }
+            });
+        });
+    </script> -->
+
+    <!-- <script></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            /** init gtm after 3500 seconds - this could be adjusted */
+            setTimeout(initGTM, 3500);
+        });
+        document.addEventListener('scroll', initGTMOnEvent);
+        document.addEventListener('mousemove', initGTMOnEvent);
+        document.addEventListener('touchstart', initGTMOnEvent);
+
+        function initGTMOnEvent(event) {
+            initGTM();
+            event.currentTarget.removeEventListener(event.type, initGTMOnEvent); // remove the event listener that got triggered
+        }
+
+        function initGTM() {
+            if (window.gtmDidInit) {
+                return false;
+            }
+            window.gtmDidInit = true; // flag to ensure script does not get added to DOM more than once.
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.onload = () => {
+                dataLayer.push({
+                    event: 'gtm.js',
+                    'gtm.start': (new Date()).getTime(),
+                    'gtm.uniqueEventId': 0
+                });
+            } // this part ensures PageViews is always tracked
+            script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TJD7XS3';
+
+            document.head.appendChild(script);
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            flag = 1;
+            $("#nex").click(function () {
+                if (flag == 0) {
+                    $("#side1").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side2").css("transform", "translateX(-100px) scale(1)");
+                    $("#side3").css("transform", "translateX(100px)");
+                    flag = 1;
+                }
+                else if (flag == 1) {
+                    $("#side3").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side3").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side1").css("transform", "translateX(-100px) scale(1)");
+                    $("#side2").css("transform", "translateX(100px)");
+                    flag = 2;
+                }
+                else if (flag == 2) {
+                    $("#side2").css("z-index", "999");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side2").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side3").css("transform", "translateX(-100px) scale(1)");
+                    $("#side1").css("transform", "translateX(100px)");
+                    flag = 0;
+                }
+            });
+            $("#pre").click(function () {
+                if (flag == 0) {
+                    $("#side3").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side3").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side1").css("transform", "translateX(-100px) scale(1)");
+                    $("#side2").css("transform", "translateX(100px)");
+                    flag = 2;
+                }
+                else if (flag == 1) {
+                    $("#side2").css("z-index", "999");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("z-index", "9");
+                    $("#side2").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side3").css("transform", "translateX(-100px) scale(1)");
+                    $("#side1").css("transform", "translateX(100px)");
+                    flag = 0;
+                }
+                else if (flag == 2) {
+                    $("#side1").css("z-index", "999");
+                    $("#side2").css("z-index", "9");
+                    $("#side3").css("z-index", "9");
+                    $("#side1").css("transform", "translateX(0px) scale(1.5)");
+                    $("#side2").css("transform", "translateX(-100px) scale(1)");
+                    $("#side3").css("transform", "translateX(100px)");
+                    flag = 1;
+                }
+            });
+        });
+
+        
+    </script>
+    <!-- <script>
+        var slider = $('#slider');
+
+// to the right
+var slideRight = function() {
+  
+  // switch state
+  var dumb = slider.find('.behinder.left');
+  slider.find('.behinder.right').removeClass('right').addClass('left');
+  slider.find('.behind.right').removeClass('behind').addClass('behinder');
+  slider.find('.center').removeClass('center').addClass('behind right');
+  slider.find('.behind.left').removeClass('behind left').addClass('center');
+  dumb.removeClass('behinder').addClass('behind');
+}
+
+$('#right').on('click', function(){
+  slideRight();
+});
+
+
+
+    </script> -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Osiz Technologies Pvt Ltd",
+            // ... (rest of your JSON data)
+        }
+    </script>
+
+    <!-- ... (other ld+json scripts) -->
+
+    <script src="https://www.osiztechnologies.com//asset/home-page-new/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.osiztechnologies.com//asset/home-page-new/js/bootstrap-select.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('img').on('click', function () {
+                var image = $(this).attr('src');
+                $('#portfolio_modal').on('show.bs.modal', function () {
+                    $(".img-responsive").attr("src", image);
+                });
+            });
+        });
+    </script>
+
+    <!-- <script src="https://www.osiztechnologies.com//asset/home-page-new/js/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script> -->
+    <script src="typed.min.js"></script>
+    <script>
+        var typing = new Typed(".text", {
+            strings: ["Blockchain", "Web3", "Metaverse", "Crypto Exchange", "NFT Marketplace", "Game"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true,
+        });
+    </script>
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            $(window).on('load', function () {
+                $('#footer_new_form .btn-light').attr("aria-label", "Contact Details");
+            });
+        }, 2000);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            /** init gtm after 3500 seconds - this could be adjusted */
+            setTimeout(initGTM, 3500);
+        });
+        document.addEventListener('scroll', initGTMOnEvent);
+        document.addEventListener('mousemove', initGTMOnEvent);
+        document.addEventListener('touchstart', initGTMOnEvent);
+
+        function initGTMOnEvent(event) {
+            initGTM();
+            event.currentTarget.removeEventListener(event.type, initGTMOnEvent); // remove the event listener that got triggered
+        }
+
+        function initGTM() {
+            if (window.gtmDidInit) {
+                return false;
+            }
+            window.gtmDidInit = true; // flag to ensure script does not get added to DOM more than once.
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.onload = () => {
+                dataLayer.push({
+                    event: 'gtm.js',
+                    'gtm.start': (new Date()).getTime(),
+                    'gtm.uniqueEventId': 0
+                });
+            } // this part ensures PageViews is always tracked
+            script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TJD7XS3';
+
+            document.head.appendChild(script);
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Osiz Technologies Pvt Ltd",
+            "image": [
+                "https://www.osiztechnologies.com/uploads/osiz-logo-final_24bb2384baaa99cd375c186d8ad82dd7.png",
+                "https://res.cloudinary.com/dpyy9uysx/image/upload/v1559547036/osizsite/blockchain-development-company.png",
+                "https://res.cloudinary.com/du9txven3/image/upload/v1548754460/Osiz_og_images/top-notch-software-development-company.png"
+            ],
+            "url": "https://www.osiztechnologies.com/",
+            "logo": "https://www.osiztechnologies.com/uploads/osiz-logo-final_24bb2384baaa99cd375c186d8ad82dd7.png",
+            "foundingDate": "2010",
+            "founders": [{
+                "@type": "Person",
+                "name": "Mr.Thanga Pandi & Mrs.Kiruthiga Thanga Pandi"
+            }],
+            "description": "Osiz Technologies Pvt Ltd, a fast-growing IT Software Development Company in India furnish best possible solutions in Blockchain, Big Data, Business
+            Intelligence(BI),
+            DevOps,
+            Systems Applications and Products(SAP),
+            Cloud Computing,
+            Artificial Intelligence(AI),
+            Internet of Things(IoT),
+            Augmented Reality(AR),
+            Virtual Reality(VR) and Digital Marketing.
+            ",
+            "telephone": "+919442164852",
+            "email": "info@osiztechnologies.com, sales@osiztechnologies.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Madurai",
+                "addressRegion": "India",
+                "postalCode": "625006",
+                "streetAddress": "No 22,Astalakshmi Nagar, Thanakkankulam, (Opp Seetha Lakshmi Mill gate Bus Stop), Thirunagar, Madurai"
+            }
+
+        }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Osiz Technologies Pvt Ltd",
+            "url": "https://www.osiztechnologies.com",
+            "sameAs": ["https://www.facebook.com/Osiztechnologiespvtltd/", "https://twitter.com/osiztech", "https://in.linkedin.com/company/osiz-technologies-private-limited", "https://www.youtube.com/channel/UCoAA-CuoRY0K7OEaj-Awa3w/", "https://in.pinterest.com/osiztechnologiespvtltd/", "https://www.instagram.com/osiztechnologiespvtltd/"]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.osiztechnologies.com/",
+            "name": "Osiz Technologies Pvt Ltd",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.osiztechnologies.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function openContact() {
+            var x = document.getElementById("contact_form_main");
+            var y = document.getElementById("single_trending_btn");
+            if (x.style.display == "block") {
+                x.style.display = "none";
+                y.style.display = "block";
+            } else {
+                x.style.display = "block";
+                y.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+<body>
+
+
+</body>
+
+
+
+</html>

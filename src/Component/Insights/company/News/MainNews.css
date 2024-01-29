@@ -1,0 +1,30 @@
+.news-container{
+    padding-top: 12vh;
+    background: #060606;
+    
+}
+
+
+.news-container-inner{
+    background: url(https://www.osiztechnologies.com/asset/inner-pages-new/news/banner.png);
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.news-container-inner h1{
+   font-size: 60px;
+}
+.news-container-inner p{
+ width: 700px;
+text-align: center;
+}
+
+.news-container-inner h1>span{
+    background: linear-gradient(92.12deg, #e442ff 2.22%, #3c5bff 51.79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
